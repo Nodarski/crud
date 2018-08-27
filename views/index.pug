@@ -1,0 +1,47 @@
+extends layout.pug
+
+block content
+
+  nav(class="navbar navbar-expand-lg colorTheme")
+    
+    .image-block
+      img.className#IdName(src="https://vignette.wikia.nocookie.net/dragonball/images/f/fc/Reddit-alien.png/revision/latest?cb=20130627205115" alt="Image Title" style={height:'60px',width:'35px'})
+
+    
+    button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+      span(class="navbar-toggler-icon")
+
+    form(class="form-inline my-2 my-lg-0 w-100")
+      input(class="form-control mr-xl-2 mx-1 w-75" type="search" placeholder="Cruddit Search" aria-label="Search")
+      button(class="btn btn-outline-success my-2 my-sm-6 submit" type="submit") Submit
+    
+    div(class="collapse navbar-collapse" id="navbarSupportedContent")
+      ul(class="navbar-nav mr-auto")
+        li(class="nav-item active")
+          a(class="nav-link" href="#") Home
+          span(class="sr-only") (current)
+        li(class="nav-item")
+          a(class="nav-link" href="#") Link
+        li(class="nav-item dropdown")
+          a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Dropdown
+          div(class="dropdown-menu" aria-labelledby="navbarDropdown")
+            a(class="dropdown-item" href="#") Action
+            a(class="dropdown-item" href="#") Another Action
+            div(lass="dropdown-divider")
+            a(class="dropdown-item" href="#") Something Else Here
+        li(class="nav-item")
+          a(class="nav-link disabled" href="#") Disabled
+
+
+    if user == undefined
+        p Welcome! Please 
+            a(href="/login") log in.
+    else 
+        p Hello, #{user.username} View your 
+            a(href="/profile") profile.
+
+  br
+  br
+
+
+

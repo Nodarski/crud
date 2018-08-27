@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+    style
+      include ../public/style.css
+  body
+    h1 hello world 22
+    div(id="future")
+    form(id="form chat_form name")
+        input(id="chat_input number_input" type="text")
+        input(type="submit" value="send")
+
+    
+
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+    script(src="/socket.io/socket.io.js" type="text/javascript")
+    script(src="javascript/views.js" type="text/javascript")    
+//    include ../public/javascript/generatePug.pug

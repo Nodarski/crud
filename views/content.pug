@@ -1,0 +1,53 @@
+extends index.pug
+
+block append content
+  div(class="container row col-md-12")
+    div(class="col-md-9" )
+      - for (var x = 0; x < 20; x++)
+        div(class="container colorTheme" style={margin:"5px"} )
+          div(class="row panel panel-default user-insert")
+
+            div(class="row midcol unvoted col-md-1" style={margin:'10px'})
+              div(class="score unvoted" title="1652") #{posts[x].id}
+              
+            
+            div(class="row midcol voteButtons col-md-1")
+              div(class="row midcol vote circle")
+                div(class="increment up up"+x+" false" id=x)
+                div(class="increment down down"+x+" false" id=x)
+                div(class="count count"+x) #{posts[x].votes}
+                
+            div(class=" row image thumbnail col-md-3")
+              a(href="https://" +posts[x].URL)
+                img(src=posts[x].thumbnail alt="Image Title" style={height:'55',width:'70',margin:'10px'})
+
+            div(class="comment_div col-md-7" style={margin:'10px'})
+              a(class="comment") #{posts[x].title}
+
+
+    div(class="container col-md-3 advertisements" style={height:'10000px', position: 'absolute', right: '0px'}) 
+            
+            div(class="adBlock" style={height:'350px'}) Advertisements
+                .image-block
+                img.className#IdName(src="https://static.redditgifts.com/images/uploaded/exchange-promo-ad-300-x-250/2018/7/17/2018-batch-5-living-spaces-1531863444-802862842014.png" class="img1 ads" alt="Image Title" style={position:'relative', height:'300px',width:'300px'})
+                
+                | 
+            div(class="adBlock" style={height:'350px'}) Advertisements
+                .image-block
+                img.className#IdName(src="https://blog.bannersnack.com/wp-content/uploads/2016/05/Amazon-Prime.png" class="img1 ads" alt="Image Title" style={position:'relative', height:'300px',width:'300px'})
+
+                | 
+            div(class="adBlock" style={height:'350px'}) Advertisements
+                .image-block
+                img.className#IdName(src="https://blog.bannersnack.com/wp-content/uploads/2016/05/Facebook.png" class="img1 ads" alt="Image Title" style={position:'relative', height:'300px',width:'300px'})
+
+                | 
+            div(class="adBlock" style={height:'350px'}) Advertisements
+                .image-block
+                img.className#IdName(src="https://blog.bannersnack.com/wp-content/uploads/2016/05/LinkedIn.png" class="img1 ads" alt="Image Title" style={position:'relative', height:'300px',width:'300px'})
+
+                | 
+            div(class="adBlock" style={height:'350px'}) Advertisements
+                .image-block
+                img.className#IdName(src="https://blog.bannersnack.com/wp-content/uploads/2016/05/Netflix.png" class="img1 ads" alt="Image Title" style={position:'relative', height:'300px',width:'300px'})
+
